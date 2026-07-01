@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Wholesale AI Assistant - Phase 1",
+  "version": "0.3.0",
+  "description": "Extract Amazon product data for wholesale supplier research.",
+  "permissions": ["activeTab", "scripting", "storage", "downloads"],
+  "host_permissions": [
+    "https://www.amazon.com/*",
+    "https://amazon.com/*"
+  ],
+  "action": {
+    "default_title": "Amazon Wholesale AI Assistant",
+    "default_popup": "popup.html"
+  }
+}

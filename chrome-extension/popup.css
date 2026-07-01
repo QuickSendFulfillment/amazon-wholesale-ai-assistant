@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, sans-serif;
+  width: 430px;
+  padding: 12px;
+  color: #111;
+}
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.phase {
+  margin-top: 4px;
+  color: #555;
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  margin: 5px 0;
+  padding: 9px;
+  cursor: pointer;
+  border: 1px solid #888;
+  border-radius: 6px;
+  background: #f7f7f7;
+}
+
+button:hover {
+  background: #eee;
+}
+
+button.danger {
+  color: #a00000;
+}
+
+.section {
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.section h3 {
+  margin: 0 0 8px 0;
+  font-size: 14px;
+}
+
+p {
+  margin: 6px 0;
+  font-size: 12px;
+}
+
+label {
+  display: block;
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 4px;
+  padding: 7px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+textarea {
+  min-height: 70px;
+}
+
+#status {
+  font-size: 12px;
+  margin: 8px 0;
+  color: #064f00;
+}
+
+.image-wrap {
+  text-align: center;
+  margin: 6px 0;
+}
+
+#mainImage {
+  max-width: 120px;
+  max-height: 120px;
+  display: none;
+  border-radius: 6px;
+}
+
+pre {
+  white-space: pre-wrap;
+  font-size: 11px;
+  background: #111;
+  color: #0f0;
+  padding: 8px;
+  border-radius: 6px;
+  max-height: 220px;
+  overflow: auto;
+}

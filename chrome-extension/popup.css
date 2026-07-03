@@ -1,101 +1,136 @@
 body {
-  font-family: Arial, sans-serif;
-  width: 430px;
-  padding: 12px;
-  color: #111;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f5f8;
+    color: #1f2937;
+    width: 420px;
 }
 
-h2 {
-  margin: 0;
-  font-size: 18px;
+.container {
+    padding: 14px;
 }
 
-.phase {
-  margin-top: 4px;
-  color: #555;
-  font-size: 12px;
+header {
+    background: #111827;
+    color: white;
+    padding: 14px;
+    border-radius: 12px;
+    margin-bottom: 12px;
 }
 
-button {
-  width: 100%;
-  margin: 5px 0;
-  padding: 9px;
-  cursor: pointer;
-  border: 1px solid #888;
-  border-radius: 6px;
-  background: #f7f7f7;
+header h1 {
+    margin: 0;
+    font-size: 20px;
 }
 
-button:hover {
-  background: #eee;
+header p {
+    margin: 4px 0 0;
+    font-size: 12px;
+    color: #d1d5db;
 }
 
-button.danger {
-  color: #a00000;
+.tabs {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 12px;
+    overflow-x: auto;
 }
 
-.section {
-  background: #f5f5f5;
-  border-radius: 8px;
-  padding: 10px;
-  margin: 10px 0;
+.tab {
+    border: none;
+    background: #e5e7eb;
+    padding: 8px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    cursor: pointer;
 }
 
-.section h3 {
-  margin: 0 0 8px 0;
-  font-size: 14px;
+.tab.active {
+    background: #2563eb;
+    color: white;
 }
 
-p {
-  margin: 6px 0;
-  font-size: 12px;
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-label {
-  display: block;
-  margin-top: 8px;
-  font-size: 12px;
-  font-weight: bold;
-}
-
-input, textarea {
-  width: 100%;
-  box-sizing: border-box;
-  margin-top: 4px;
-  padding: 7px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
+.card h2 {
+    font-size: 15px;
+    margin: 0 0 10px;
 }
 
 textarea {
-  min-height: 70px;
+    width: 100%;
+    min-height: 85px;
+    resize: vertical;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
 }
 
-#status {
-  font-size: 12px;
-  margin: 8px 0;
-  color: #064f00;
+button {
+    font-family: Arial, sans-serif;
 }
 
-.image-wrap {
-  text-align: center;
-  margin: 6px 0;
+#startMission {
+    width: 100%;
+    margin-top: 10px;
+    background: #16a34a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-#mainImage {
-  max-width: 120px;
-  max-height: 120px;
-  display: none;
-  border-radius: 6px;
+#startMission:hover {
+    background: #15803d;
 }
 
-pre {
-  white-space: pre-wrap;
-  font-size: 11px;
-  background: #111;
-  color: #0f0;
-  padding: 8px;
-  border-radius: 6px;
-  max-height: 220px;
-  overflow: auto;
+#productCard,
+#recommendations {
+    font-size: 13px;
+    color: #374151;
+    line-height: 1.4;
+}
+
+ul {
+    margin: 0;
+    padding-left: 18px;
+    font-size: 13px;
+}label{
+    display:block;
+    margin-top:10px;
+    margin-bottom:5px;
+    font-size:13px;
+    font-weight:bold;
+    color:#374151;
+}
+
+select,
+input{
+    width:100%;
+    box-sizing:border-box;
+    padding:10px;
+    border-radius:10px;
+    border:1px solid #d1d5db;
+    font-size:13px;
+    margin-bottom:8px;
+    background:white;
+}
+
+select:focus,
+input:focus,
+textarea:focus{
+    outline:none;
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,0.15);
 }

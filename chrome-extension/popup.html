@@ -1,56 +1,93 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8" />
-  <title>Amazon Wholesale AI Assistant</title>
-  <link rel="stylesheet" href="popup.css" />
+    <meta charset="UTF-8">
+    <title>QuickSend AI</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
+
 <body>
-  <h2>Amazon Wholesale AI Assistant</h2>
-  <p class="phase">Phase 1: Amazon Product Extractor</p>
 
-  <button id="extractBtn">Extract Product Data</button>
-  <button id="saveBtn">Save Lead</button>
-  <button id="exportBtn">Export CSV</button>
-  <button id="clearBtn" class="danger">Clear Saved Leads</button>
+<div class="container">
 
-  <div id="status"></div>
+    <header>
+        <h1>🚀 QuickSend AI</h1>
+        <p>Your Amazon Wholesale Research Assistant</p>
+    </header>
 
-  <div class="section">
-    <h3>Product Data</h3>
+    <nav class="tabs">
+        <button class="tab active">Dashboard</button>
+        <button class="tab">Product</button>
+        <button class="tab">Mission</button>
+        <button class="tab">Suppliers</button>
+        <button class="tab">Settings</button>
+    </nav>
 
-    <div class="image-wrap">
-      <img id="mainImage" src="" />
-    </div>
+<section class="card">
 
-    <p><b>Brand:</b> <span id="brand">-</span></p>
-    <p><b>ASIN:</b> <span id="asin">-</span></p>
-    <p><b>Title:</b> <span id="title">-</span></p>
-    <p><b>Price:</b> <span id="price">-</span></p>
-    <p><b>Category:</b> <span id="category">-</span></p>
-    <p><b>Seller:</b> <span id="seller">-</span></p>
-    <p><b>URL:</b> <a id="url" href="#" target="_blank">-</a></p>
-  </div>
+    <h2>Mission Center</h2>
 
-  <div class="section">
-    <h3>Research Notes</h3>
-    <label>Official brand website</label>
-    <input id="brandWebsite" placeholder="https://brand.com" />
+    <label>Mission Type</label>
+    <select id="missionType">
+        <option value="find_suppliers">Find Suppliers</option>
+        <option value="research_brand">Research Brand</option>
+        <option value="verify_supplier">Verify Supplier</option>
+        <option value="open_wholesale_account">Open Wholesale Account</option>
+        <option value="generate_email">Generate Outreach Email</option>
+    </select>
 
-    <label>Notes</label>
-    <textarea id="notes" placeholder="Supplier notes, restrictions, invoice info, etc."></textarea>
-  </div>
+    <label>Target Country</label>
+    <input id="targetCountry" value="United States" placeholder="United States, Germany, UAE, Canada..." />
 
-  <div class="section">
-    <h3>Saved Leads</h3>
-    <p><b>Total saved:</b> <span id="leadCount">0</span></p>
-  </div>
+    <label>Mission Notes</label>
+    <textarea id="missionNotes" placeholder="Example: Find wholesalers and distributors carrying this brand."></textarea>
 
-  <details>
-    <summary>Debug extracted data</summary>
-    <pre id="debug">{}</pre>
-  </details>
+    <button id="startMission">
+        Start Mission
+    </button>
 
-  <script src="popup.js"></script>
+</section>
+
+    <section class="card">
+
+        <h2>Current Amazon Product</h2>
+
+        <div id="productCard">
+
+            Waiting for product...
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>AI Recommendations</h2>
+
+        <div id="recommendations">
+
+            No recommendations yet.
+
+        </div>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Mission Progress</h2>
+
+        <ul>
+
+            <li>Waiting...</li>
+
+        </ul>
+
+    </section>
+
+</div>
+
+<script src="popup.js"></script>
+
 </body>
 </html>

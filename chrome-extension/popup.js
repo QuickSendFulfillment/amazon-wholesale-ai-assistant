@@ -119,14 +119,21 @@ async function startMission() {
         const planItems = result.research_plan
     .map(item => `<li>Step ${item.step}: ${item.task}</li>`)
     .join("");
+    const websitePages = result.website_analysis?.pages_to_check
+    ?.map(page => `<li>${page.type}: ${result.website_analysis.website_url}${page.search_path}</li>`)
+    .join("") || "";
 
 document.querySelector(".card ul").innerHTML = `
     <li><strong>${result.mission_status}</strong></li>
     <li><strong>Agent:</strong> ${result.agent}</li>
     <li><strong>Brand:</strong> ${result.brand}</li>
     <li><strong>Country:</strong> ${result.country}</li>
+    <li><strong>Official Website:</strong> ${result.official_website?.official_website || "-"}</li>
+    <li><strong>Website Pages to Check:</strong></li>
+    ${websitePages}
+    <li><strong>Research Plan:</strong></li>
     ${planItems}
-`;
+    `;
 
     } catch (err) {
         document.querySelector(".card ul").innerHTML = `
